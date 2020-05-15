@@ -6,7 +6,7 @@ import lombok.Setter;
 @Getter @Setter
 public class BarberRest {
 
-    private Long barberId;
+    private Long id;
     private String firstName;
     private String lastName;
     private String phone;

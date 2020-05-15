@@ -1,11 +1,11 @@
 package com.barber.app.booking.repository;
 
-import com.barber.app.booking.entity.BarberEntity;
+import com.barber.app.booking.entity.Barber;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface BarberRepository extends CrudRepository<BarberEntity, Long> {
-    BarberEntity findBarberByFirstNameAndLastName(String firstName,String lastName);
-    BarberEntity findBarberByPhone(String Phone);
+public interface BarberRepository extends CrudRepository<Barber, Long> {
+    Barber findBarberByFirstNameAndLastName(String firstName, String lastName);
+    Barber findBarberByPhone(String Phone);
 }

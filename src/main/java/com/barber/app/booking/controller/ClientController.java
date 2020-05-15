@@ -1,9 +1,9 @@
 package com.barber.app.booking.controller;
 
 import com.barber.app.booking.dto.ClientDto;
-import com.barber.app.booking.model.request.UserDetailsRequestModel;
-import com.barber.app.booking.model.response.UserRest;
-import com.barber.app.booking.service.ClientService;
+import com.barber.app.booking.model.request.ClientDetailsRequestModel;
+import com.barber.app.booking.model.response.ClientRest;
+import com.barber.app.booking.service.implementation.ClientServiceImpl;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 public class ClientController {
 
     @Autowired
-    ClientService clientService;
+    ClientServiceImpl clientService;
 
     @GetMapping
     public String getUser()
@@ -23,9 +23,9 @@ public class ClientController {
     }
 
     @PostMapping
-    public UserRest createUser(@RequestBody UserDetailsRequestModel userDetails)
+    public ClientRest createUser(@RequestBody ClientDetailsRequestModel userDetails)
     {
-        UserRest returnValue = new UserRest();
+        ClientRest returnValue = new ClientRest();
 
         ClientDto userDto = new ClientDto();
         BeanUtils.copyProperties(userDetails,userDto);

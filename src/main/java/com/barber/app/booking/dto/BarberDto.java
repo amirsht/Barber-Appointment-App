@@ -12,7 +12,7 @@ import java.io.Serializable;
 public class BarberDto  implements Serializable {
     private static final long serialVersionUID = 3442688945808143136L;
 
-    private Long barberId;
+    private Long id;
     private String firstName;
     private String lastName;
     private String phone;

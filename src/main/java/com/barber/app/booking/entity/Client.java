@@ -1,23 +1,19 @@
 package com.barber.app.booking.entity;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
 import java.io.Serializable;
 
-@Entity(name = "clients")
-@Getter
-@Setter
+@Entity
+@Getter @Setter @NoArgsConstructor
 @ToString(exclude = "serialVersionUID")
-public class ClientEntity implements Serializable {
+public class Client extends ModelBase implements Serializable {
 
     private static final long serialVersionUID = 1519266279023955802L;
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
 
     @Column(nullable = false, length = 120,unique = true)
     private String email;

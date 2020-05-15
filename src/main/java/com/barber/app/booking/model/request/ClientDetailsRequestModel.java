@@ -4,7 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Getter @Setter
-public class UserDetailsRequestModel {
+public class ClientDetailsRequestModel {
 
     private String email;
     private String firstName;
